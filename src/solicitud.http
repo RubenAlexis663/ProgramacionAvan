@@ -1,0 +1,33 @@
+### Obtener todos los productos
+GET http://localhost:8080/products
+
+### Obtener un producto por la tienda
+GET http://localhost:8080/products/tienda
+
+### Crear un nuevo producto en cualquiera de las tiendas
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "name": "Nuevo Producto",
+  "category": "Categoría",
+  "price": 100.0,
+  "stock": 10,
+  "tienda": "tienda"
+}
+
+### Actualizar un producto en cualquiera de las tiendas
+PUT http://localhost:8080/products/id
+Content-Type: application/json
+
+{
+  "name": "Producto Actualizado",
+  "category": "Nueva Categoría",
+  "price": 150.0,
+  "stock": 20,
+  "tienda": "tienda"
+}
+
+### Eliminar un producto en cualquiera de las tiendas
+DELETE http://localhost:8080/products/id
+
